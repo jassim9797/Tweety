@@ -22,6 +22,12 @@
     </div>
 
     <div>
+        <label for="Banner" class="block text-sm font-bold mb-1 mx-4 mt-5 text-gray-700">Banner</label>
+        <input type="file" name="banner"  id="banner" class="shadow appearance-none border rounded mx-4  text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-full py-1" >
+        <img src="{{$user->banner}}" alt="" width="40" class="mx-4">
+    </div>
+
+    <div>
         <label for="Email" class="block text-sm font-bold mb-1 mx-4 mt-5 text-gray-700">EMAIL</label>
         <input type="email" name="email" value="{{$user->email}}" id="email" class="shadow appearance-none border rounded mx-4  text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-full py-1" required>
     </div>

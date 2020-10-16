@@ -23,7 +23,8 @@ class User extends Authenticatable
         'email',
         'password',
         'username',
-        'avatar'
+        'avatar',
+        'banner'
     ];
 
     /**
@@ -67,6 +68,18 @@ class User extends Authenticatable
         } else {
     
             return asset('images/default.png');
+        }
+    }
+
+    public function getBannerAttribute($value)
+    {
+        if(isset($value)) {
+
+            return asset('storage/' . $value );
+    
+        } else {
+    
+            return asset('images\default-profile-banner.jpg');
         }
     }
 
