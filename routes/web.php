@@ -27,8 +27,10 @@ Auth::routes();
 Route::group(['middleware' => ['auth']], function () {
 Route::get('/logout', [LogoutController::class, 'logout'])->name('logout'); 
 Route::post('/tweets', [TweetController::class, 'store'])->name('tweet');
+Route::post('/tweets', [TweetController::class, 'store'])->name('tweet');
 Route::post('/profiles/{user:username}/follow', [FollowController::class, 'store'])->name('follow');
 Route::get('/tweets', [TweetController::class, 'index'])->name('tweets');
+Route::get('/', [TweetController::class, 'index']);
 Route::get('/profiles/{user:username}', [ProfileController::class, 'show'])->name('profile'); 
 Route::get('/profiles/{user:username}/edit', [ProfileController::class, 'edit'])->name('editProfile'); 
 Route::patch('/profiles/{user:username}', [ProfileController::class, 'update'])->name('updateProfile'); 
