@@ -35,7 +35,8 @@ class ProfileController extends Controller
             'username' => "required|unique:users,username,{$user->id}|max:255|alpha_dash",
             'password' => 'string|min:8|max:255|confirmed|nullable',
             'email'=>"string|email|required|max:255|unique:users,email,{$user->id}",
-            'avatar'=>'|file'
+            'avatar'=>'file',
+            'banner'=>'file'
         ]);
         if ($attributes['password']=='') {
             $attributes['password'] = $user->password;
@@ -43,6 +44,11 @@ class ProfileController extends Controller
         if(request('avatar'))
         {
          $attributes['avatar']=request('avatar')->store('avatars');   
+        }
+
+        if(request('banner'))
+        {
+         $attributes['banner']=request('banner')->store('banner');   
         }
         
         $user->update($attributes);
