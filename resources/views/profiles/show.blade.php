@@ -24,7 +24,7 @@
         <div>
 
         <p class="text-sm">
-            There are only three ways to make this work. The first is to let me take care of everything. The second is for you to take care of everything. The third is to split everything 50 / 50. I think the last option is the most preferable, but I'm certain it'll also mean the end of our marriage.
+           {{$user->description}}
         </p>    
 
     </div>

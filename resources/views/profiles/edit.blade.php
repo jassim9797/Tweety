@@ -14,6 +14,11 @@
         <input type="text" name="username" value="{{$user->username}}" id="username" class="shadow appearance-none border rounded mx-4  text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-full py-1" required>
     </div>
 
+    <div class="flex flex-col ">
+        <label for="description " class="block text-sm font-bold mb-1 mx-4 mt-5 text-gray-700">DESCRIPTION </label>
+        <textarea name="description" id="" cols="30" rows="2" class="shadow appearance-none border rounded mx-4  text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-full py-1">{{$user->description}}</textarea>
+    </div>
+
 
     <div>
         <label for="avatar" class="block text-sm font-bold mb-1 mx-4 mt-5 text-gray-700">AVATAR</label>
